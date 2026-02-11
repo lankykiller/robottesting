@@ -1,0 +1,12 @@
+…/groupwork/robot-tests ❯ python -m venv venv
+
+…/groupwork/robot-tests ❯ source venv/bin/activate
+
+groupwork/robot-tests ✗ python -m pip install --upgrade pip
+
+…/groupwork/robot-tests ✗ pip install robotframework
+
+…/groupwork/robot-tests ✗ robot tests/
+
+
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on linux)" generated="2026-02-11T10:04:53.997495" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/dmwai/Documents/koulu/swtesting/groupwork/robot-tests/tests">
+<suite id="s1-s1" name="Flameshot Cli" source="/home/dmwai/Documents/koulu/swtesting/groupwork/robot-tests/tests/flameshot_cli.robot">
+<test id="s1-s1-t1" name="Flameshot Help Command Works" line="5">
+<kw name="Run Process" owner="Process">
+<msg time="2026-02-11T10:04:54.031671" level="INFO">Starting process:
+flameshot --help</msg>
+<msg time="2026-02-11T10:04:54.032635" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-02-11T10:04:54.064393" level="INFO">Process completed.</msg>
+<msg time="2026-02-11T10:04:54.064534" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>flameshot</arg>
+<arg>--help</arg>
+<arg>stdout=PIPE</arg>
+<arg>stderr=PIPE</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.031108" elapsed="0.033457"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-02-11T10:04:54.065287" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${result.rc}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.064741" elapsed="0.000601"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result.stdout}</arg>
+<arg>Flameshot</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.065447" elapsed="0.000675"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result.stdout}</arg>
+<arg>Usage:</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.066283" elapsed="0.000733"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result.stdout}</arg>
+<arg>Options:</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.067114" elapsed="0.000569"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${result.stdout}</arg>
+<arg>Subcommands:</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-02-11T10:04:54.067831" elapsed="0.000613"/>
+</kw>
+<status status="PASS" start="2026-02-11T10:04:54.030286" elapsed="0.038315"/>
+</test>
+<status status="PASS" start="2026-02-11T10:04:54.024074" elapsed="0.044948"/>
+</suite>
+<status status="PASS" start="2026-02-11T10:04:53.998120" elapsed="0.071382"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Flameshot Cli" id="s1-s1" pass="1" fail="0" skip="0">Tests.Flameshot Cli</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
